@@ -1,0 +1,320 @@
+/* CSS Reset */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg-color: #0f0f1a;
+  --grid-color: rgba(100, 100, 100, 0.2);
+  --accent-green: #a2ff00;
+  --accent-pink: #ff2c70;
+  --accent-blue: #0066ff;
+}
+
+body {
+  background-color: #0b0b17;
+  background-image:
+    radial-gradient(circle at top left, #1a0140, transparent 45%),
+    radial-gradient(circle at bottom right, #36007e, transparent 50%),
+    linear-gradient(45deg, #0c0c1a 25%, transparent 25%),
+    linear-gradient(-45deg, #0c0c1a 25%, transparent 25%),
+    linear-gradient(45deg, transparent 75%, #0c0c1a 75%),
+    linear-gradient(-45deg, transparent 75%, #0c0c1a 75%);
+  background-size: 100px 100px;
+  background-repeat: repeat;
+  background-position: center;
+  background-color: var(--bg-color);
+  background-image:
+    linear-gradient(var(--grid-color) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid-color) 1px, transparent 1px);
+  background-size: 20px 20px;
+  color: #ffffff;
+  font-family: 'Inter', sans-serif;
+  line-height: 1.6;
+}
+
+.hero {
+  position: relative;
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  letter-spacing: 2px;
+  display: inline-block;
+}
+
+.hero .smile {
+  margin-left: 0.5rem;
+}
+
+.admin-btn {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background-color: var(--accent-green);
+  color: #000;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+section {
+  padding: 4rem 2rem;
+}
+
+section h2 {
+  color: var(--accent-pink);
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  position: relative;
+}
+
+/* Utilities */
+.smile {
+  font-size: 2rem;
+}
+
+/* More detailed styling for updated index.html */
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: var(--bg-color);
+  color: #eee;
+  padding-bottom: 4rem;
+}
+
+.hero-content {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.year {
+  color: var(--accent-green);
+  font-weight: 700;
+}
+
+.smile {
+  font-size: 2rem;
+  margin-left: 0.5rem;
+}
+
+.admin-btn {
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.admin-btn:hover {
+  background-color: #8fd400;
+}
+
+.intro {
+  max-width: 900px;
+  margin: 0 auto 4rem auto;
+}
+
+.intro-text h2 {
+  font-weight: 700;
+  color: white;
+}
+
+.intro-image img {
+  border: 4px solid var(--accent-green);
+}
+
+/* Profile section tweaks */
+.profile-header h2 {
+  font-weight: 800;
+}
+
+.profile-header .role {
+  font-size: 1.1rem;
+  color: #a0a0a0;
+}
+
+.contact-links a:hover {
+  text-decoration: underline;
+}
+
+.card-grid .card {
+  color: #cef;
+  background-color: rgba(20,20,40,0.7);
+  box-shadow: 0 0 10px var(--accent-green);
+  transition: box-shadow 0.3s ease;
+}
+.card-grid .card:hover {
+  box-shadow: 0 0 15px var(--accent-pink);
+}
+
+.projects-grid {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.project-card {
+  cursor: pointer;
+  filter: drop-shadow(0 0 2px #000);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.project-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px var(--accent-blue);
+}
+
+.project-card .label {
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+
+@media (max-width: 768px) {
+  .intro {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  .intro-image img {
+    margin: 0 auto;
+  }
+  .card-grid {
+    grid-template-columns: 1fr;
+  }
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+}
+/* Add more styles as needed */
+/* Hero Title & Tags */
+.hero-title {
+  font-family: 'Press Start 2P', monospace;
+  font-size: 3rem;
+  color: var(--accent-green);
+  letter-spacing: 2px;
+}
+.hero-tags {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+  margin-top: 1rem;
+}
+.tag {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.25rem 0.75rem;
+  border-radius: 4px;
+  color: #000;
+}
+.tag.pink { background-color: var(--accent-pink); }
+.tag.green { background-color: var(--accent-green); }
+.tag.blue  { background-color: var(--accent-blue); }
+.subtitle {
+  font-family: 'Inter', sans-serif;
+  color: #ccc;
+  margin-top: 0.5rem;
+}
+
+/* Intro Section */
+.intro {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 2rem;
+}
+.intro-text h2 {
+  font-size: 2rem;
+  line-height: 1.4;
+}
+.highlight {
+  padding: 0.2rem 0.4rem;
+  border-radius: 4px;
+}
+.highlight.green { background-color: var(--accent-green); color: #000; }
+.highlight.pink  { background-color: var(--accent-pink);  color: #000; }
+.highlight.blue  { background-color: var(--accent-blue);  color: #fff; }
+.intro-image img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+/* Profile Section */
+.profile {
+  padding: 4rem 2rem;
+}
+.profile-header {
+  text-align: center;
+}
+.profile-header h2 {
+  font-size: 2.5rem;
+  color: #fff;
+}
+.profile-header .role {
+  color: #ccc;
+  margin-bottom: 1rem;
+}
+.contact-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  list-style: none;
+  font-size: 0.9rem;
+  color: #ccc;
+}
+.contact-links a {
+  color: var(--accent-blue);
+  text-decoration: none;
+}
+
+/* Cards Grid */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+  margin-top: 2rem;
+}
+.card {
+  background-color: rgba(255,255,255,0.05);
+  padding: 1rem;
+  border-radius: 8px;
+}
+.card h3 {
+  margin-bottom: 0.5rem;
+  color: var(--accent-green);
+}
+
+/* Projects Grid */
+.projects {
+  padding: 4rem 2rem;
+}
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px,1fr));
+  gap: 1rem;
+  margin-top: 2rem;
+}
+.project-card {
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #111;
+}
+.project-card img {
+  width: 100%;
+  display: block;
+}
+.project-card .label {
+  position: absolute;
+  bottom: 0.5rem;
+  left: 0.5rem;
+  background-color: var(--accent-blue);
+  color: #fff;
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+  font-size: 0.75rem;
+}
