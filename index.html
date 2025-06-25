@@ -9,8 +9,13 @@
   <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
+  <button id="theme-toggle">Light Mode</button>
   <header class="hero">
-    <div class="hero-content">
+    <div class="hero-blob blob1"></div>
+    <div class="hero-blob blob2"></div>
+    <div class="hero-blob blob1"></div>
+    <div class="hero-blob blob2"></div>
+    <div class="hero-content parallax-layer" data-depth="0.05">
       <h1 class="hero-title"><span class="year">2025</span> portfolio <span class="smile">🙂</span></h1>
       <div class="hero-tags">
         <span class="tag pink">AI/ML</span>
@@ -21,17 +26,20 @@
     </div>
     <button class="admin-btn">admin</button>
   </header>
+  <a class="scroll-down" href="#intro">↓</a>
 
-  <section id="intro" class="intro">
+  <section id="intro" class="intro" data-animate="fade-up">
     <div class="intro-text">
       <h2>Building scalable AI-driven <span class="highlight green">data-driven</span><br/>
       solutions and <span class="highlight pink">insights</span><br/>
       that enable <span class="highlight blue">automation</span> and innovation.</h2>
+  <a class="scroll-down" href="#profile">↓</a>
     </div>
     <div class="intro-image">
-      <img src="images/profile.jpg" alt="Hithesh M R" />
+      <img src="images/profile.png" alt="Hithesh M R" />
     </div>
   </section>
+  <a class="scroll-down" href="#profile">↓</a>
 
   <section id="profile" class="profile">
     <div class="profile-header">
@@ -52,7 +60,7 @@
       </ul>
     </div>
     <div class="card-grid">
-      <div class="card">
+      <div class="card" data-animate="fade-up">
         <h3>Professional Summary</h3>
         <p>
           Data Scientist specializing in AI/ML, NLP, and data analytics, with expertise in Retrieval-Augmented Generation (RAG), predictive modeling, and Geospatial Analytics.
@@ -62,7 +70,7 @@
           Passionate about leveraging AI for automation and business intelligence.
         </p>
       </div>
-      <div class="card">
+      <div class="card" data-animate="fade-up">
         <h3>Experience</h3>
         <ul>
           <li><strong>Gramener</strong> - Associate Data Scientist (Sept 2025 - Present)
@@ -91,7 +99,7 @@
           </li>
         </ul>
       </div>
-      <div class="card">
+      <div class="card" data-animate="fade-up">
         <h3>Education</h3>
         <ul>
           <li>NIT Karnataka, M.Tech Computational and Data Science (2022-2024), CGPA: 8.43</li>
@@ -99,14 +107,14 @@
           <li>Jawahar Navodaya Vidyalaya, PCMC +2 (2016-2017), Percentage: 87.20%</li>
         </ul>
       </div>
-      <div class="card">
+      <div class="card" data-animate="fade-up">
         <h3>Research & Publications</h3>
         <p>
           4th IEEE CONIT 2024 - "From Pixels to Prognosis: Exploring UNet to Segment Anything in Mammogram Image Processing for Tumor Segmentation".
           Selected for presentation highlighting expertise in medical image segmentation.
         </p>
       </div>
-      <div class="card">
+      <div class="card" data-animate="fade-up">
         <h3>Skills</h3>
         <ul>
           <li>Python, JavaScript, YAML, HTML/CSS</li>
@@ -120,8 +128,9 @@
           <li>Evaluation metrics: Precision@K, MMR, NDCG</li>
         </ul>
       </div>
-      <div class="card">
+      <div class="card" data-animate="fade-up">
         <h3>Certifications</h3>
+  <a class="scroll-down" href="#projects">↓</a>
         <ul>
           <li>Apache Hadoop Developer Certification by IBM</li>
           <li>Machine Learning Onramp - MathWorks Certificate</li>
@@ -130,6 +139,7 @@
       </div>
     </div>
   </section>
+  <a class="scroll-down" href="#projects">↓</a>
 
   <section id="projects" class="projects">
     <h2>Projects</h2>
@@ -149,6 +159,8 @@
     </div>
   </section>
 
+    <div id="floating-pointer"></div>
+    <div class="pointer-trail"></div>
   <script src="js/main.js"></script>
 </body>
 </html>
