@@ -114,9 +114,13 @@ This project is open source and available under the [MIT License](LICENSE).
 ## Contact
 
 - Email: hitheshmr@gmail.com
-- LinkedIn: [Your LinkedIn Profile](https://linkedin.com/in/your-linkedin)
-- GitHub: [Your GitHub Profile](https://github.com/your-github)
-- YouTube: [Your YouTube Channel](https://youtube.com/your-channel)
+- LinkedIn: [Hithesh M R](https://www.linkedin.com/in/hithesh-mr/)
+- GitHub: [hithesh-mr](https://github.com/hithesh-mr)
+- YouTube: [PerceptronHub](https://www.youtube.com/@PerceptronHub03)
+- Google Scholar: [Hithesh M R](https://scholar.google.com/citations?user=Qw3M7msAAAAJ&hl=en&authuser=4)
+- GeeksforGeeks: [_hithesh03](https://www.geeksforgeeks.org/user/_hithesh03/)
+- LeetCode: [03hitheshmr](https://leetcode.com/u/03hitheshmr/)
+- Kaggle: [hitheshmr](https://www.kaggle.com/hitheshmr)
   - Vercel or Netlify (static hosting)
   - GitHub Pages (for plain HTML/CSS/JS)
 - Optional Extras:
