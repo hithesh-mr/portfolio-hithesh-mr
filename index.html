@@ -1,166 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Hithesh M R | Portfolio 2025</title>
-  <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/styles.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+  <style>
+    .hidden { display: none; }
+  </style>
 </head>
 <body>
-  <button id="theme-toggle">Light Mode</button>
-  <header class="hero">
-    <div class="hero-blob blob1"></div>
-    <div class="hero-blob blob2"></div>
-    <div class="hero-blob blob1"></div>
-    <div class="hero-blob blob2"></div>
-    <div class="hero-content parallax-layer" data-depth="0.05">
-      <h1 class="hero-title"><span class="year">2025</span> portfolio <span class="smile">🙂</span></h1>
-      <div class="hero-tags">
-        <span class="tag pink">AI/ML</span>
-        <span class="tag green">Data Science</span>
-        <span class="tag blue">Analytics</span>
-      </div>
-      <p class="subtitle">By Hithesh M R</p>
+  <header class="header">
+    <div class="container">
+      <nav class="nav">
+        <ul>
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="experience.html">Experience</a></li>
+          <li><a href="projects.html">Projects and Publications</a></li>
+          <li><a href="#">Resume and Certification</a></li>
+          <li>
+            <button class="theme-toggle" aria-label="Toggle theme">
+              <i class="fas fa-moon moon-icon"></i>
+              <i class="fas fa-sun sun-icon"></i>
+              <span class="sr-only">Toggle dark mode</span>
+            </button>
+          </li>
+        </ul>
+      </nav>
     </div>
-    <button class="admin-btn">admin</button>
   </header>
-  <a class="scroll-down" href="#intro">↓</a>
-
-  <section id="intro" class="intro" data-animate="fade-up">
-    <div class="intro-text">
-      <h2>Building scalable AI-driven <span class="highlight green">data-driven</span><br/>
-      solutions and <span class="highlight pink">insights</span><br/>
-      that enable <span class="highlight blue">automation</span> and innovation.</h2>
-  <a class="scroll-down" href="#profile">↓</a>
-    </div>
-    <div class="intro-image">
-      <img src="images/profile.png" alt="Hithesh M R" />
-    </div>
-  </section>
-  <a class="scroll-down" href="#profile">↓</a>
-
-  <section id="profile" class="profile">
-    <div class="profile-header">
-      <h2>Hithesh M R</h2>
-      <p class="role">Associate Data Scientist</p>
-      <ul class="contact-links">
-        <li><a href="mailto:hitheshmr@gmail.com">hitheshmr@gmail.com</a></li>
-        <li>+91 99019 03593</li>
-        <li>Madikeri, Karnataka</li>
-        <li>
-          <a href="#">LinkedIn</a> |
-          <a href="#">Google Scholar</a> |
-          <a href="#">Kaggle</a> |
-          <a href="#">GitHub</a> |
-          <a href="#">GeeksforGeeks</a> |
-          <a href="#">LeetCode</a>
-        </li>
-      </ul>
-    </div>
-    <div class="card-grid">
-      <div class="card" data-animate="fade-up">
-        <h3>Professional Summary</h3>
-        <p>
-          Data Scientist specializing in AI/ML, NLP, and data analytics, with expertise in Retrieval-Augmented Generation (RAG), predictive modeling, and Geospatial Analytics.
-          Proficient in Python, SQL, and cloud platforms (AWS, Azure).
-          Experienced in AI-driven decision-making, vector search, and scalable data-driven solutions.
-          Published researcher in IEEE conferences at CONIT 2024.
-          Passionate about leveraging AI for automation and business intelligence.
-        </p>
+  <section class="hero" data-aos="fade-in">
+    <div class="container hero-content">
+      <div class="hero-text">
+        <h1 class="typing-text">Hello, I'm Hithesh</h1>
+        <p class="subtitle">Building scalable AI-driven data-driven solutions and insights that enable automation and innovation.</p>
       </div>
-      <div class="card" data-animate="fade-up">
-        <h3>Experience</h3>
-        <ul>
-          <li><strong>Gramener</strong> - Associate Data Scientist (Sept 2025 - Present)
-            <ul>
-              <li>Developed RAG system to query financial PDFs using AI and vector search.</li>
-              <li>Implemented pgvector in PostgreSQL for OpenAI embeddings.</li>
-              <li>Designed rank fusion methods (RRF, LCRF, CombSUM) for better retrieval.</li>
-              <li>Built API framework; enabled multi-cloud deployment (AWS, Azure).</li>
-              <li>Technical stack: Python, PostgreSQL, OpenAI API, LangChain, YAML, Git.</li>
-            </ul>
-          </li>
-          <li><strong>Timesheet Generator for Jira</strong>
-            <ul>
-              <li>Automated timesheets integrating Azure OpenAI and Jira REST API.</li>
-              <li>Optimized backend with Python 3.8+; secured credentials via YAML config.</li>
-              <li>Technical stack: Python, Jira REST API, Azure OpenAI, GitLab CI/CD.</li>
-            </ul>
-          </li>
-          <li><strong>Malaysia Dataset POC</strong> - Traffic Flow Visualization
-            <ul>
-              <li>Built interactive traffic visualization using Mapbox GL JS, Turf.js.</li>
-              <li>Trained ML models for traffic forecasting.</li>
-              <li>Backend built with Flask, Flask-CORS, JavaScript, Bootstrap.</li>
-              <li>Technical stack: Python, Flask, Mapbox GL JS, ArcGIS.</li>
-            </ul>
-          </li>
-        </ul>
-      </div>
-      <div class="card" data-animate="fade-up">
-        <h3>Education</h3>
-        <ul>
-          <li>NIT Karnataka, M.Tech Computational and Data Science (2022-2024), CGPA: 8.43</li>
-          <li>NIE Mysore, B.Tech Mechanical Engineering (2017-2021), CGPA: 8.49</li>
-          <li>Jawahar Navodaya Vidyalaya, PCMC +2 (2016-2017), Percentage: 87.20%</li>
-        </ul>
-      </div>
-      <div class="card" data-animate="fade-up">
-        <h3>Research & Publications</h3>
-        <p>
-          4th IEEE CONIT 2024 - "From Pixels to Prognosis: Exploring UNet to Segment Anything in Mammogram Image Processing for Tumor Segmentation".
-          Selected for presentation highlighting expertise in medical image segmentation.
-        </p>
-      </div>
-      <div class="card" data-animate="fade-up">
-        <h3>Skills</h3>
-        <ul>
-          <li>Python, JavaScript, YAML, HTML/CSS</li>
-          <li>PostgreSQL (pgvector), SQL</li>
-          <li>Machine Learning & AI (LLMs, OpenAI API, RAG, Text Embeddings)</li>
-          <li>Rank fusion techniques (RRF, LCRF, CombSUM)</li>
-          <li>Geospatial technologies (Turf.js, Mapbox GL JS, ArcGIS)</li>
-          <li>Cloud platforms: AWS, Azure, On-Prem Deployments</li>
-          <li>APIs and frameworks: LangChain, Jira REST API, Flask</li>
-          <li>Version control: Git, GitLab CI/CD</li>
-          <li>Evaluation metrics: Precision@K, MMR, NDCG</li>
-        </ul>
-      </div>
-      <div class="card" data-animate="fade-up">
-        <h3>Certifications</h3>
-  <a class="scroll-down" href="#projects">↓</a>
-        <ul>
-          <li>Apache Hadoop Developer Certification by IBM</li>
-          <li>Machine Learning Onramp - MathWorks Certificate</li>
-          <li>MATLAB Onramp - MathWorks Certificate</li>
-        </ul>
+      <div class="hero-image">
+        <img src="images/profile.png" alt="Profile picture">
       </div>
     </div>
   </section>
-  <a class="scroll-down" href="#projects">↓</a>
+  
+  <button id="backToTop" class="back-to-top" title="Go to top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
 
-  <section id="projects" class="projects">
-    <h2>Projects</h2>
-    <div class="projects-grid">
-      <div class="project-card">
-        <img src="images/project1.jpg" alt="RAG Framework for Financial Document Querying" />
-        <span class="label">Web Design</span>
-      </div>
-      <div class="project-card">
-        <img src="images/project2.jpg" alt="Timesheet Generator for Jira" />
-        <span class="label">Mobile App</span>
-      </div>
-      <div class="project-card">
-        <img src="images/project3.jpg" alt="Traffic Flow Visualization POC" />
-        <span class="label">Website Design</span>
-      </div>
-    </div>
-  </section>
-
-    <div id="floating-pointer"></div>
-    <div class="pointer-trail"></div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script src="js/theme.js"></script>
   <script src="js/main.js"></script>
+  <script>
+    // Initialize AOS
+    AOS.init({
+      duration: 1000,
+      once: true
+    });
+  </script>
 </body>
 </html>

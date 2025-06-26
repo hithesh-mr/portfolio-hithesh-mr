@@ -12,16 +12,102 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
   // Theme Toggle
-  const themeToggleBtn = document.getElementById('theme-toggle');
-  const savedTheme = localStorage.getItem('theme') || 'dark';
+  const themeToggleCheckbox = document.getElementById('theme-toggle-checkbox');
+  const savedTheme = localStorage.getItem('theme') || 'light';
   document.body.classList.add(savedTheme);
-  themeToggleBtn.textContent = savedTheme === 'light' ? 'Dark Mode' : 'Light Mode';
-  themeToggleBtn.addEventListener('click', () => {
-    const newTheme = document.body.classList.contains('light') ? 'dark' : 'light';
-    document.body.classList.toggle('light');
-    document.body.classList.toggle('dark');
-    themeToggleBtn.textContent = newTheme === 'light' ? 'Dark Mode' : 'Light Mode';
+  themeToggleCheckbox.checked = savedTheme === 'dark';
+  themeToggleCheckbox.addEventListener('change', () => {
+    const newTheme = themeToggleCheckbox.checked ? 'dark' : 'light';
+    document.body.classList.remove('light', 'dark');
+    document.body.classList.add(newTheme);
     localStorage.setItem('theme', newTheme);
+  });
+
+  // Back to Top Button
+  const backToTopButton = document.getElementById('backToTop');
+  
+  // Show/hide back to top button on scroll
+  window.addEventListener('scroll', () => {
+    if (window.pageYOffset > 300) {
+      backToTopButton.classList.add('visible');
+    } else {
+      backToTopButton.classList.remove('visible');
+    }
+  });
+
+  // Smooth scroll to top
+  backToTopButton.addEventListener('click', (e) => {
+    e.preventDefault();
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  });
+
+  // Add hover effect to interactive links
+  const interactiveLinks = document.querySelectorAll('.interactive-link');
+  interactiveLinks.forEach(link => {
+    link.addEventListener('mouseenter', () => {
+      link.style.transform = 'translateY(-2px)';
+    });
+    link.addEventListener('mouseleave', () => {
+      link.style.transform = 'translateY(0)';
+    });
+  });
+
+  // Smooth scrolling for navigation links
+  const navLinks = document.querySelectorAll('nav a');
+  navLinks.forEach(link => {
+    link.addEventListener('click', (e) => {
+      const href = link.getAttribute('href');
+      if (href.startsWith('#')) {
+        e.preventDefault();
+        const targetId = href.substring(1);
+        const targetElement = document.getElementById(targetId);
+        if (targetElement) {
+          window.scrollTo({
+            top: targetElement.offsetTop - 80,
+            behavior: 'smooth'
+          });
+        }
+      }
+    });
+  });
+
+  // Add animation class to elements when they come into view
+  const animateOnScroll = () => {
+    const elements = document.querySelectorAll('[data-aos]');
+    elements.forEach(element => {
+      const elementTop = element.getBoundingClientRect().top;
+      const windowHeight = window.innerHeight;
+      
+      if (elementTop < windowHeight - 100) {
+        element.style.opacity = '1';
+        element.style.transform = 'translateY(0)';
+      }
+    });
+  };
+
+  // Initial check for elements in viewport
+  animateOnScroll();
+  
+  // Check on scroll
+  window.addEventListener('scroll', animateOnScroll);
+
+  // Add hover effect to profile images
+  const profileImages = document.querySelectorAll('.hero-image img, .about-image img');
+  profileImages.forEach(img => {
+    img.addEventListener('mousemove', (e) => {
+      const { left, top, width, height } = e.target.getBoundingClientRect();
+      const x = (e.clientX - left) / width - 0.5;
+      const y = (e.clientY - top) / height - 0.5;
+      
+      e.target.style.transform = `translateY(-5px) rotateY(${x * 5}deg) rotateX(${-y * 5}deg)`;
+    });
+    
+    img.addEventListener('mouseleave', (e) => {
+      e.target.style.transform = 'translateY(-5px)';
+    });
   });
 });
 

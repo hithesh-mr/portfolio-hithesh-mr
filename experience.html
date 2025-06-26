@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Experience | Hithesh M R</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+  <style>
+    .hidden { display: none; }
+  </style>
+  <style>
+    .experience-section {
+      padding: 80px 0;
+      background-color: var(--bg-primary);
+      color: var(--text-primary);
+    }
+    
+    .job {
+      margin-bottom: 50px;
+      padding: 25px;
+      background: var(--card-bg);
+      border-radius: 8px;
+      box-shadow: var(--card-shadow);
+      border: 1px solid var(--border-color);
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 0.6s ease;
+    }
+    
+    .job.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    
+    .job-header {
+      margin-bottom: 20px;
+      padding-bottom: 15px;
+      border-bottom: 1px solid var(--border-color);
+    }
+    
+    .job-title {
+      font-size: 1.5rem;
+      color: var(--text-primary);
+      margin-bottom: 5px;
+    }
+    
+    .company {
+      font-size: 1.2rem;
+      color: var(--link-color);
+      margin-bottom: 5px;
+      font-weight: 500;
+    }
+    
+    .job-period {
+      color: var(--text-secondary);
+      font-style: italic;
+      margin-bottom: 15px;
+      display: block;
+    }
+    
+    .project {
+      margin: 25px 0;
+      padding: 20px;
+      background: var(--bg-secondary);
+      border-radius: 8px;
+      border-left: 3px solid var(--link-color);
+      transition: all 0.3s ease;
+    }
+    
+    .project:hover {
+      transform: translateX(5px);
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
+    
+    .project-title {
+      font-size: 1.2rem;
+      color: var(--text-primary);
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    
+    .project-title i {
+      color: var(--link-color);
+    }
+    
+    .project-description {
+      color: var(--text-secondary);
+      line-height: 1.7;
+      margin-top: 15px;
+    }
+    
+    .project-description ul {
+      padding-left: 20px;
+      margin: 15px 0 0 0;
+    }
+    
+    .project-description li {
+      margin-bottom: 8px;
+      position: relative;
+    }
+    
+    .project-description li::before {
+      content: '•';
+      color: var(--link-color);
+      font-weight: bold;
+      position: absolute;
+      left: -15px;
+    }
+    
+    @media (max-width: 768px) {
+      .experience-section {
+        padding: 40px 0;
+      }
+      
+      .project {
+        padding: 15px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <div class="container">
+      <nav class="nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="experience.html" class="active">Experience</a></li>
+          <li><a href="projects.html">Projects and Publications</a></li>
+          <li><a href="#">Resume and Certification</a></li>
+          <li>
+            <button class="theme-toggle" aria-label="Toggle theme">
+              <i class="fas fa-moon moon-icon"></i>
+              <i class="fas fa-sun sun-icon"></i>
+              <span class="sr-only">Toggle dark mode</span>
+            </button>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section class="experience" data-aos="fade-up">
+    <div class="container">
+      <h1>Experience</h1>
+      <div class="job">
+        <div class="job-header">
+          <h2 class="job-title">Associate Data Scientist</h2>
+          <div class="company">Gramener Technology - A Straive Company</div>
+          <span class="job-period">September 2024 – Present</span>
+        </div>
+        
+        <div class="project" data-aos="fade-up" data-aos-delay="100">
+          <h3 class="project-title">LLMs, Multi-Agent Systems & AI Agents for Retail</h3>
+          <div class="project-description">
+            Currently developing advanced AI agents and multi-agent systems leveraging LLMs for automation, process optimization, and customer engagement in retail environments.
+          </div>
+        </div>
+        
+        <div class="project" data-aos="fade-up" data-aos-delay="150">
+          <h3 class="project-title">Retrieval-Augmented Generation for Financial Documents</h3>
+          <div class="project-description">
+            <ul>
+              <li>Designed and deployed a RAG system to intelligently extract and query data from complex financial PDFs using OpenAI embeddings and vector search (pgvector).</li>
+              <li>Optimized retrieval accuracy with advanced rank fusion techniques (RRF, LCRF, CombSUM).</li>
+              <li>Built RESTful API frameworks for document handling; enabled agile deployment on AWS and Azure.</li>
+            </ul>
+          </div>
+        </div>
+        
+        <div class="project" data-aos="fade-up" data-aos-delay="200">
+          <h3 class="project-title">Automated Timesheet System for Jira</h3>
+          <div class="project-description">
+            <ul>
+              <li>Developed an automated, AI-driven timesheet generation platform, integrating Azure OpenAI and Jira REST APIs for concise reporting and process automation.</li>
+              <li>Enhanced operational efficiency and time management for technology teams.</li>
+            </ul>
+          </div>
+        </div>
+        
+        <div class="project" data-aos="fade-up" data-aos-delay="250">
+          <h3 class="project-title">Traffic Flow Analytics and Visualization (Malaysia POC)</h3>
+          <div class="project-description">
+            <ul>
+              <li>Built real-time predictive analytics and interactive geospatial visualization tools for traffic forecasting using Python, Flask, and frontend mapping libraries.</li>
+              <li>Supported urban planning through scalable, data-driven insights.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <button id="backToTop" class="back-to-top" title="Go to top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script src="js/theme.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    // Initialize AOS
+    AOS.init({
+      duration: 1000,
+      once: true
+    });
+    
+    // Add animation to job items as they come into view
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, {
+      threshold: 0.1
+    });
+    
+    document.querySelectorAll('.job').forEach((job) => {
+      observer.observe(job);
+    });
+  </script>
+</body>
+</html>
