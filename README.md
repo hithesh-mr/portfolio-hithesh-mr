@@ -127,3 +127,5 @@ This project is open source and available under the [MIT License](LICENSE).
   - TypeScript for type safety
   - MDX or Markdown for content blocks
   - GitHub Actions for CI/CD pipelines
+
+  simple push

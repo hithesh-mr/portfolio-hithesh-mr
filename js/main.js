@@ -12,16 +12,29 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
   // Theme Toggle
+  const themeToggle = document.querySelector('.theme-toggle');
   const themeToggleCheckbox = document.getElementById('theme-toggle-checkbox');
   const savedTheme = localStorage.getItem('theme') || 'light';
+  
+  // Set initial theme
   document.body.classList.add(savedTheme);
-  themeToggleCheckbox.checked = savedTheme === 'dark';
-  themeToggleCheckbox.addEventListener('change', () => {
-    const newTheme = themeToggleCheckbox.checked ? 'dark' : 'light';
-    document.body.classList.remove('light', 'dark');
-    document.body.classList.add(newTheme);
-    localStorage.setItem('theme', newTheme);
-  });
+  if (themeToggleCheckbox) {
+    themeToggleCheckbox.checked = savedTheme === 'dark';
+  }
+  
+  // Toggle theme when clicking the theme toggle
+  if (themeToggle) {
+    themeToggle.addEventListener('click', (e) => {
+      e.preventDefault();
+      const newTheme = document.body.classList.contains('dark') ? 'light' : 'dark';
+      document.body.classList.remove('light', 'dark');
+      document.body.classList.add(newTheme);
+      localStorage.setItem('theme', newTheme);
+      if (themeToggleCheckbox) {
+        themeToggleCheckbox.checked = newTheme === 'dark';
+      }
+    });
+  }
 
   // Back to Top Button
   const backToTopButton = document.getElementById('backToTop');
@@ -111,7 +124,6 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
-// Placeholder for future interactivity (theme toggle, animations)
 // Interactive Pointer, Parallax & Gradient
 (() => {
   const root = document.documentElement;
@@ -119,6 +131,9 @@ document.addEventListener('DOMContentLoaded', () => {
   const trailContainer = document.querySelector('.pointer-trail');
   const layers = document.querySelectorAll('.parallax-layer');
   let ticking = false;
+  
+  // Skip if no pointer trail container exists
+  if (!trailContainer) return;
 
   function updatePointer(e) {
     const x = e.clientX, y = e.clientY;
