@@ -65,9 +65,7 @@ document.addEventListener('DOMContentLoaded', () => {
   // Shuffle array to randomize positions
   const shuffledTopics = techTopics.sort(() => Math.random() - 0.5);
   
-  // Create disk container
-  const diskContainer = document.createElement('div');
-  diskContainer.className = 'disk-container';
+  // Use the disk container from initDisk()
   
   // Create disk element
   const disk = document.createElement('div');
@@ -107,13 +105,6 @@ document.addEventListener('DOMContentLoaded', () => {
   });
   
   diskContainer.appendChild(disk);
-  
-  // Insert disk container at the beginning of the body
-  if (document.body.firstChild) {
-    document.body.insertBefore(diskContainer, document.body.firstChild);
-  } else {
-    document.body.appendChild(diskContainer);
-  }
   
   // Pause animation when not in view
   const observer = new IntersectionObserver((entries) => {
